@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>simple calculator</title>
+<!-- styling -->
+<style>
+.bc{
+  background-color:Chocolate;
+  font-size:19px;
+  padding:15px 30px;
+  text-align:centre;
+  }
+.e{
+   background-color:Chocolate;
+  font-size:35px;
+  padding:5px 175px;
+  text-align:centre;
+}
+.b
+{
+  background-color:Cornsilk;
+  font-size:20px;
+  padding:15px 30px;
+  text-align:centre;
+}
+.t{
+  font-size:20px;
+}
+.h{
+  background-color:green;
+  color:white;
+}
+</style>
+<script>
+<!--function that all clear-->
+function ac()
+{
+  document.getElementById("res").value=" ";
+}
+<!--function that displays values-->
+function show(input)
+{
+  document.getElementById("res").value+=input;
+}
+<!--function that calculate values-->
+function cal()
+{
+ var output=eval(document.getElementById("res").value)
+ document.getElementById("res").value=output;
+}
+</script>
+</head>
+<body>
+<!--text box and all clear button-->
+<selector class="r">
+<table border="1"cellspasing="5px" cellpadding="5px" bgcolor="DarkCyan">
+<th colspan="4" bgcolor="green">Simple calculator</th>
+<!--<caption><h1 class="h">Simple calculator</h1><caption>-->
+<tr>
+<td colspan="4" align="centre"><input type="text" class="t" id="res"></input></td>
+</tr>
+<!-- All buttons -->
+<tr>
+<td><button class="b" onclick ="show('1')">1</button></td>
+<td><button class="b" onclick="show('2')">2</button></td>
+<td><button class="b" onclick="show('3')">3</button></td>
+<td align="centre"><button class="bc" onclick="ac()">AC</button></td>
+</tr>
+<tr>
+
+<td><button class="b" onclick="show('4')">4</button></td>
+<td><button class="b" onclick="show('5')">5</button></td>
+<td><button class="b" onclick="show('6')">6</button></td>
+<td><button class="bc" onclick="show('+')">+</button></td>
+</tr>
+<tr>
+<td><button class="b" onclick="show('7')">7</button></td>
+<td><button class="b" onclick="show('8')">8</button></td>
+<td><button class="b" onclick="show('9')">9</button></td>
+<td><button class="bc" onclick="show('-')">-</button></td>
+</tr>
+<tr>
+<td><button class="bc" onclick="show('.')">.</button></td>
+<td><button class="b" onclick="show('0')">0</button></td>
+<td><button class="bc" onclick="show('/')">/</button></td>
+<td><button class="bc" onclick="show('*')">*</button></td>
+</tr>
+</table>
+<table>
+<tr>
+<td colspan="4"><button class="e" onclick="cal('=')"> =</button></td>
+</tr>
+</table>
+</selector>
+</body>
+</html>
